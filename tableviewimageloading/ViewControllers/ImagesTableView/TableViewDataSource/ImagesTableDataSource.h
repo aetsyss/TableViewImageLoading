@@ -1,18 +1,16 @@
 //
-//  ImagesTableViewModel.h
+//  ImagesTableDataSource.h
 //  tableviewimageloading
 //
 //  Created by Aleksei Tsyss on 20/02/2019.
 //  Copyright © 2019 Aleksei Tsyss. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ImagesTableViewModel : NSObject
-
-@property (strong, nonatomic, readonly) NSArray <NSString *> *images;
+@interface ImagesTableDataSource : NSObject <UITableViewDataSource>
 
 - (instancetype)initWithImages:(NSArray <NSString *> *)images;
 

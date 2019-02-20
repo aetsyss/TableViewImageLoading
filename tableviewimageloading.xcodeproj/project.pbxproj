@@ -21,6 +21,8 @@
 		BEB44B99221C35AF00D7786F /* NSURLSessionTask+Associated.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */; };
 		BEB44B9F221D641400D7786F /* ImagesTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44B9E221D641400D7786F /* ImagesTableViewModel.m */; };
 		BEB44BA4221D66B400D7786F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BA3221D66B400D7786F /* MainViewController.m */; };
+		BEB44BA8221D68D400D7786F /* ImagesTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BA7221D68D400D7786F /* ImagesTableDataSource.m */; };
+		BEB44BAC221D6EC700D7786F /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BAB221D6EC700D7786F /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,10 @@
 		BEB44B9E221D641400D7786F /* ImagesTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewModel.m; sourceTree = "<group>"; };
 		BEB44BA2221D66B400D7786F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BEB44BA3221D66B400D7786F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BEB44BA6221D68D400D7786F /* ImagesTableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesTableDataSource.h; sourceTree = "<group>"; };
+		BEB44BA7221D68D400D7786F /* ImagesTableDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesTableDataSource.m; sourceTree = "<group>"; };
+		BEB44BAA221D6DE500D7786F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BEB44BAB221D6EC700D7786F /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 				BE3C21D3221BFCAF00286E91 /* Categories */,
 				BE3C21D5221C036C00286E91 /* Protocols */,
 				BE3C21D9221C040700286E91 /* Services */,
+				BEB44BAD221D6F3A00D7786F /* Constants */,
 				BE3C21BA221AD93700286E91 /* main.m */,
 				BE3C21B9221AD93700286E91 /* Info.plist */,
 			);
@@ -187,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB44BA1221D642C00D7786F /* ViewModel */,
+				BEB44BA9221D6A7C00D7786F /* TableViewDataSource */,
 				BE3C21C1221AEE5500286E91 /* ImagesTableViewController.h */,
 				BE3C21C2221AEE5500286E91 /* ImagesTableViewController.m */,
 			);
@@ -209,6 +217,24 @@
 				BEB44BA3221D66B400D7786F /* MainViewController.m */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		BEB44BA9221D6A7C00D7786F /* TableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BEB44BA6221D68D400D7786F /* ImagesTableDataSource.h */,
+				BEB44BA7221D68D400D7786F /* ImagesTableDataSource.m */,
+			);
+			path = TableViewDataSource;
+			sourceTree = "<group>";
+		};
+		BEB44BAD221D6F3A00D7786F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BEB44BAA221D6DE500D7786F /* Constants.h */,
+				BEB44BAB221D6EC700D7786F /* Constants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +314,12 @@
 				BE3C21C6221AEF5900286E91 /* ImageTableViewCell.m in Sources */,
 				BE3C21D8221C03FC00286E91 /* DataProvider.m in Sources */,
 				BE3C21AD221AD93600286E91 /* AppDelegate.m in Sources */,
+				BEB44BAC221D6EC700D7786F /* Constants.m in Sources */,
 				BE3C21C3221AEE5500286E91 /* ImagesTableViewController.m in Sources */,
 				BE3C21DD221C098700286E91 /* LocalCache.m in Sources */,
 				BE3C21C9221AFDA100286E91 /* ImageTableViewCellViewModel.m in Sources */,
 				BEB44B9F221D641400D7786F /* ImagesTableViewModel.m in Sources */,
+				BEB44BA8221D68D400D7786F /* ImagesTableDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

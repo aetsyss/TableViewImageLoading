@@ -9,32 +9,22 @@
 #import "ImagesTableViewController.h"
 #import "ImageTableViewCell.h"
 #import "ImageTableViewCellViewModel.h"
+#import "ImagesTableDataSource.h"
+
+@interface ImagesTableViewController ()
+@property (strong, nonatomic) ImagesTableDataSource *dataSource;
+@end
 
 @implementation ImagesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.dataSource = [[ImagesTableDataSource alloc] initWithImages:self.viewModel.images];
+    self.tableView.dataSource = self.dataSource;
 }
 
-#pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.images.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-
-    if (cell) {
-        NSString *imageName = [self.viewModel.images objectAtIndex:indexPath.row];
-        ImageTableViewCellViewModel *viewModel = [[ImageTableViewCellViewModel alloc] initWithFileName:imageName index:indexPath.row];
-        [cell fillWith:viewModel];
-    } else {
-        // TODO
-    }
-
-    return cell;
-}
+#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

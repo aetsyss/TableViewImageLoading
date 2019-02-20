@@ -14,6 +14,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     if ([segue.identifier isEqualToString:@"showImagesTableView"]) {
+
         NSArray *images = @[
                             @"388834-lcdledoledtvs-samsung-qn65q8c",
                             @"388834-lcdledoledtvs-samsung-qn65q8c",
