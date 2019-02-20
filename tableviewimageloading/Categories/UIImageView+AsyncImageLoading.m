@@ -26,6 +26,11 @@
 }
 
 - (void)loadImageWithURL:(NSURL *)url dataProvider:(id<DataProviderProtocol>)dataProvider {
+    
+    if (self.associatedUrl) {
+        [dataProvider stopTaskForURL:self.associatedUrl];
+    }
+
     self.associatedUrl = url;
     self.image = nil;
 

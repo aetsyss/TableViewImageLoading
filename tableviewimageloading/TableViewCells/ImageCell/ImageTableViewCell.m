@@ -14,12 +14,12 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    NSLog(@"awakeFromNib, imageView: %p", self.image);
+    // NSLog(@"awakeFromNib, imageView: %p", self.image);
 }
 
 - (void)prepareForReuse {
     [super prepareForReuse];
-    NSLog(@"prepareForReuse: %p", self.image);
+    // NSLog(@"prepareForReuse: %p", self.image);
     // TODO cancel / pause downloading task for the imageView
 }
 
@@ -27,7 +27,7 @@
     self.imageDescriptionLabel.text = viewModel.fileName;
     self.indexLabel.text = [NSString stringWithFormat:@"%ld", viewModel.index];
 
-    NSString *fullPath = [NSString stringWithFormat:@"https://crdms.images.consumerreports.org/w_444/prod/products/cr/models/%@", viewModel.fileName];
+    NSString *fullPath = [NSString stringWithFormat:@"https://crdms.images.consumerreports.org/w_888/prod/products/cr/models/%@", viewModel.fileName];
     NSURL *url = [NSURL URLWithString:fullPath];
     [self.image loadImageWithURL:url];
 }

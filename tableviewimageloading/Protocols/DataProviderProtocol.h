@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol DataProviderProtocol <NSObject>
 
 - (void)dataForURL:(NSURL *)url completionHandler:(void (^)(NSData * _Nullable data, NSError * _Nullable error))completionHandler;
+- (void)stopTaskForURL:(NSURL *)url;
 
 @end
 

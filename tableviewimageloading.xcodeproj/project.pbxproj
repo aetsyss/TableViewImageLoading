@@ -18,6 +18,7 @@
 		BE3C21D2221BFC9B00286E91 /* UIImageView+AsyncImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21D1221BFC9B00286E91 /* UIImageView+AsyncImageLoading.m */; };
 		BE3C21D8221C03FC00286E91 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21D7221C03FC00286E91 /* DataProvider.m */; };
 		BE3C21DD221C098700286E91 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21DC221C098700286E91 /* LocalCache.m */; };
+		BEB44B99221C35AF00D7786F /* NSURLSessionTask+Associated.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		BE3C21DA221C08AA00286E91 /* CacheProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheProtocol.h; sourceTree = "<group>"; };
 		BE3C21DB221C098700286E91 /* LocalCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalCache.h; sourceTree = "<group>"; };
 		BE3C21DC221C098700286E91 /* LocalCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalCache.m; sourceTree = "<group>"; };
+		BEB44B97221C35AF00D7786F /* NSURLSessionTask+Associated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Associated.h"; sourceTree = "<group>"; };
+		BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Associated.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 			children = (
 				BE3C21D0221BFC9B00286E91 /* UIImageView+AsyncImageLoading.h */,
 				BE3C21D1221BFC9B00286E91 /* UIImageView+AsyncImageLoading.m */,
+				BEB44B97221C35AF00D7786F /* NSURLSessionTask+Associated.h */,
+				BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			files = (
 				BE3C21D2221BFC9B00286E91 /* UIImageView+AsyncImageLoading.m in Sources */,
 				BE3C21BB221AD93700286E91 /* main.m in Sources */,
+				BEB44B99221C35AF00D7786F /* NSURLSessionTask+Associated.m in Sources */,
 				BE3C21C6221AEF5900286E91 /* ImageTableViewCell.m in Sources */,
 				BE3C21D8221C03FC00286E91 /* DataProvider.m in Sources */,
 				BE3C21AD221AD93600286E91 /* AppDelegate.m in Sources */,
