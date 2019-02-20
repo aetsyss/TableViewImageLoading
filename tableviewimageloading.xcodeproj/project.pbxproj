@@ -19,6 +19,8 @@
 		BE3C21D8221C03FC00286E91 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21D7221C03FC00286E91 /* DataProvider.m */; };
 		BE3C21DD221C098700286E91 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21DC221C098700286E91 /* LocalCache.m */; };
 		BEB44B99221C35AF00D7786F /* NSURLSessionTask+Associated.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */; };
+		BEB44B9F221D641400D7786F /* ImagesTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44B9E221D641400D7786F /* ImagesTableViewModel.m */; };
+		BEB44BA4221D66B400D7786F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BA3221D66B400D7786F /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		BE3C21DC221C098700286E91 /* LocalCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalCache.m; sourceTree = "<group>"; };
 		BEB44B97221C35AF00D7786F /* NSURLSessionTask+Associated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Associated.h"; sourceTree = "<group>"; };
 		BEB44B98221C35AF00D7786F /* NSURLSessionTask+Associated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Associated.m"; sourceTree = "<group>"; };
+		BEB44B9D221D641400D7786F /* ImagesTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewModel.h; sourceTree = "<group>"; };
+		BEB44B9E221D641400D7786F /* ImagesTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewModel.m; sourceTree = "<group>"; };
+		BEB44BA2221D66B400D7786F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BEB44BA3221D66B400D7786F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,8 @@
 		BE3C21CA221BEEBB00286E91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BE3C21C1221AEE5500286E91 /* ImagesTableViewController.h */,
-				BE3C21C2221AEE5500286E91 /* ImagesTableViewController.m */,
+				BEB44BA5221D66B700D7786F /* MainView */,
+				BEB44BA0221D642100D7786F /* ImagesTableView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +183,34 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		BEB44BA0221D642100D7786F /* ImagesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BEB44BA1221D642C00D7786F /* ViewModel */,
+				BE3C21C1221AEE5500286E91 /* ImagesTableViewController.h */,
+				BE3C21C2221AEE5500286E91 /* ImagesTableViewController.m */,
+			);
+			path = ImagesTableView;
+			sourceTree = "<group>";
+		};
+		BEB44BA1221D642C00D7786F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEB44B9D221D641400D7786F /* ImagesTableViewModel.h */,
+				BEB44B9E221D641400D7786F /* ImagesTableViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BEB44BA5221D66B700D7786F /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BEB44BA2221D66B400D7786F /* MainViewController.h */,
+				BEB44BA3221D66B400D7786F /* MainViewController.m */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB44BA4221D66B400D7786F /* MainViewController.m in Sources */,
 				BE3C21D2221BFC9B00286E91 /* UIImageView+AsyncImageLoading.m in Sources */,
 				BE3C21BB221AD93700286E91 /* main.m in Sources */,
 				BEB44B99221C35AF00D7786F /* NSURLSessionTask+Associated.m in Sources */,
@@ -256,6 +291,7 @@
 				BE3C21C3221AEE5500286E91 /* ImagesTableViewController.m in Sources */,
 				BE3C21DD221C098700286E91 /* LocalCache.m in Sources */,
 				BE3C21C9221AFDA100286E91 /* ImageTableViewCellViewModel.m in Sources */,
+				BEB44B9F221D641400D7786F /* ImagesTableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

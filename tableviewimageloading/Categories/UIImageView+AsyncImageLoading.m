@@ -26,7 +26,7 @@
 }
 
 - (void)loadImageWithURL:(NSURL *)url dataProvider:(id<DataProviderProtocol>)dataProvider {
-    
+
     if (self.associatedUrl) {
         [dataProvider stopTaskForURL:self.associatedUrl];
     }
@@ -43,6 +43,7 @@
             NSLog(@"UIImageView.loadImageWithURL Error: %@", error);
         }
     }];
+
 }
 
 @end
