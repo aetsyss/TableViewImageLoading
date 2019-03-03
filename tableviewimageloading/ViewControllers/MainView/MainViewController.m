@@ -43,7 +43,8 @@
                             @"388828-lcdledoledtvs-lg-oled55c7p",
                             ];
 
-        ((ImagesTableViewController *)segue.destinationViewController).viewModel = [[ImagesTableViewModel alloc] initWithImages:images];
+        ImagesTableViewModel *viewModel = [[ImagesTableViewModel alloc] initWithImages:images];
+        ((ImagesTableViewController *)segue.destinationViewController).viewModel = viewModel;
     }
 
 }

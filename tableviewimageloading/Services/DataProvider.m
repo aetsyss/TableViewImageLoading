@@ -102,7 +102,7 @@
         for (NSURLSessionDataTask *task in dataTasks) {
             if ([task.originalRequest.URL.absoluteString isEqualToString:url.absoluteString]) {
                 [task suspend];
-                NSLog(@"Task %@ suspended", task.originalRequest.URL.lastPathComponent);
+                NSLog(@"Task %ld, request: %@ suspended", task.taskIdentifier, task.originalRequest.URL.lastPathComponent);
                 break;
             }
         }
@@ -138,7 +138,7 @@
         NSLog(@"total tasks: %lu", (unsigned long)[dataTasks count]);
 
         for (NSURLSessionDataTask *task in dataTasks) {
-            NSLog(@"task: %@, state: %ld, completions: %lu", task.originalRequest.URL.lastPathComponent, (long)task.state, task.associatedCompletionHandlers.count);
+            NSLog(@"task: %ld, request: %@, state: %ld, completions: %lu", task.taskIdentifier, task.originalRequest.URL.lastPathComponent, (long)task.state, task.associatedCompletionHandlers.count);
         }
     }];
 

@@ -27,7 +27,8 @@
 
 - (void)loadImageWithURL:(NSURL *)url dataProvider:(id<DataProviderProtocol>)dataProvider {
 
-    if (self.associatedUrl) {
+    // handle cases when the UIImageView is being reused
+    if (self.associatedUrl && ![self.associatedUrl.absoluteString isEqualToString:url.absoluteString]) {
         [dataProvider stopTaskForURL:self.associatedUrl];
     }
 
@@ -35,7 +36,7 @@
     self.image = nil;
 
     [dataProvider dataForURL:url completionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
-        if (data && [[self.associatedUrl absoluteString] isEqualToString:[url absoluteString]]) {
+        if (data && [self.associatedUrl.absoluteString isEqualToString:url.absoluteString]) {
             [self performSelectorOnMainThread:@selector(setImage:) withObject:[UIImage imageWithData:data] waitUntilDone:NO];
         }
 
