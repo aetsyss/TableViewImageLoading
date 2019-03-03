@@ -23,17 +23,24 @@
 
 - (nullable id)objectForKey:(nonnull id<NSCopying>)key {
     @synchronized (self) {
-        return [self.dict objectForKey:key];
+        if (key) {
+            return [self.dict objectForKey:key];
+        } else {
+            return nil;
+        }
     }
 }
 
 - (void)setObject:(nullable id)object forKey:(nonnull id<NSCopying>)key {
     @synchronized (self) {
-        if (object) {
-            [self.dict setObject:object forKey:key];
-        } else {
-            [self.dict removeObjectForKey:key];
+        if (key) {
+            if (object) {
+                [self.dict setObject:object forKey:key];
+            } else {
+                [self.dict removeObjectForKey:key];
+            }
         }
+
     }
 }
 
