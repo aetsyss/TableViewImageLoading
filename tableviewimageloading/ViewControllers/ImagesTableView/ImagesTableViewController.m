@@ -7,8 +7,6 @@
 //
 
 #import "ImagesTableViewController.h"
-#import "ImageTableViewCell.h"
-#import "ImageTableViewCellViewModel.h"
 #import "ImagesTableDataSource.h"
 
 @interface ImagesTableViewController ()

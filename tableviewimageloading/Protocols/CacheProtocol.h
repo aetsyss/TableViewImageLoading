@@ -11,8 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol CacheProtocol <NSObject>
+
 - (nullable id)objectForKey:(id<NSCopying>)key;
 - (void)setObject:(nullable id)object forKey:(id<NSCopying>)key;
+
 @end
 
 NS_ASSUME_NONNULL_END

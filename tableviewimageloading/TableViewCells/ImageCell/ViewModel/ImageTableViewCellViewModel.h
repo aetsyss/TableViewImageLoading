@@ -12,10 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageTableViewCellViewModel : NSObject
 
-@property (copy, nonatomic) NSString *fileName;
-@property (nonatomic) NSUInteger index;
+@property (strong, nonatomic) NSURL *url;
 
-- (instancetype)initWithFileName:(NSString *)fileName index:(NSUInteger)index;
+- (instancetype)initWithImageURL:(NSURL *)url;
 
 @end
 

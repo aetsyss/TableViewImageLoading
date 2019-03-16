@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DataProviderProtocol.h"
+#import "CacheProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DataProvider : NSObject <DataProviderProtocol>
 
 + (instancetype)shared;
+- (instancetype)initWithCache:(id<CacheProtocol>)cache;
 
 @end
 

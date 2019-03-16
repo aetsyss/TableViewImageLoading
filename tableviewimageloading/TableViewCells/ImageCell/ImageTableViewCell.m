@@ -9,19 +9,14 @@
 #import "ImageTableViewCell.h"
 #import "ImageTableViewCellViewModel.h"
 #import "UIImageView+AsyncImageLoading.h"
-#import "Constants.h"
 
 @implementation ImageTableViewCell
 
 - (void)fillWith:(ImageTableViewCellViewModel *)viewModel {
-    self.imageDescriptionLabel.text = viewModel.fileName;
-    self.indexLabel.text = [NSString stringWithFormat:@"%ld", viewModel.index];
+    self.imageDescriptionLabel.text = viewModel.url.lastPathComponent;
+    self.indexLabel.text = @"#";
 
-    NSString *fullPath = [NSString stringWithFormat:@"%@%@", kImagesBaseUrl, viewModel.fileName];
-
-    NSURL *url = [NSURL URLWithString:fullPath];
-
-    [self.image loadImageWithURL:url];
+    [self.image loadImageWithURL:viewModel.url completion:nil];
 }
 
 @end

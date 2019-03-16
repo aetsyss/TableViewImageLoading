@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSURL *associatedUrl;
 
-- (void)loadImageWithURL:(NSURL *)url;
-- (void)loadImageWithURL:(NSURL *)url dataProvider:(id<DataProviderProtocol>)dataProvider;
+- (void)loadImageWithURL:(NSURL *)url completion:(void (^ _Nullable)(NSError * _Nullable error))completion;
+- (void)loadImageWithURL:(NSURL *)url dataProvider:(id<DataProviderProtocol>)dataProvider completion:(void (^ _Nullable)(NSError * _Nullable error))completion;
 
 @end
 

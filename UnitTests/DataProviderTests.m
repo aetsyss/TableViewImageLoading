@@ -7,31 +7,36 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "DataProvider.h"
+#import "LocalCache.h"
 
 @interface DataProviderTests : XCTestCase
-
+@property (strong, nonatomic) DataProvider *dataProvider;
+@property (strong, nonatomic) LocalCache *localCache;
 @end
 
 @implementation DataProviderTests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.localCache = [[LocalCache alloc] init];
+    self.dataProvider = [[DataProvider alloc] initWithCache:self.localCache];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
+- (void)testDataProviderUsesCachedData {
+    NSURL *url = [NSURL URLWithString:@"https://www.google.com"];
+    NSString *str = @"teststring";
+    NSData *testData = [str dataUsingEncoding:NSUTF8StringEncoding];
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+    [self.localCache setObject:testData forKey:url];
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+    XCTestExpectation *exp = [self expectationWithDescription:@"data"];
+
+    [self.dataProvider dataForURL:url completionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
+        XCTAssertEqualObjects(testData, data);
+        [exp fulfill];
     }];
+
+    [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 @end

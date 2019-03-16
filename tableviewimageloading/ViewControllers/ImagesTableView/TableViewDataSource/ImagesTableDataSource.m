@@ -9,6 +9,7 @@
 #import "ImagesTableDataSource.h"
 #import "ImageTableViewCell.h"
 #import "ImageTableViewCellViewModel.h"
+#import "Constants.h"
 
 @interface ImagesTableDataSource ()
 @property (strong, nonatomic) NSArray <NSString *> *images;
@@ -34,7 +35,10 @@
     ImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
     NSString *imageName = [self.images objectAtIndex:indexPath.row];
-    ImageTableViewCellViewModel *viewModel = [[ImageTableViewCellViewModel alloc] initWithFileName:imageName index:indexPath.row];
+    NSString *fullPath = [NSString stringWithFormat:@"%@%@", kImagesBaseUrl, imageName];
+    NSURL *url = [NSURL URLWithString:fullPath];
+
+    ImageTableViewCellViewModel *viewModel = [[ImageTableViewCellViewModel alloc] initWithImageURL:url];
 
     [cell fillWith:viewModel];
     return cell;

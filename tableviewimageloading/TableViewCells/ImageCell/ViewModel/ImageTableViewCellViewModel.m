@@ -10,10 +10,9 @@
 
 @implementation ImageTableViewCellViewModel
 
-- (instancetype)initWithFileName:(NSString *)fileName index:(NSUInteger)index {
+- (instancetype)initWithImageURL:(NSURL *)url  {
     if (self = [super init]) {
-        _fileName = fileName;
-        _index = index;
+        _url = url;
     }
 
     return self;

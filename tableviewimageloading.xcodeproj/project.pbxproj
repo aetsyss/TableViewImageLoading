@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B4910F0222C214100ACF281 /* LocalCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4910EF222C214100ACF281 /* LocalCacheTests.m */; };
 		6B4910F2222C244C00ACF281 /* DataProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4910F1222C244C00ACF281 /* DataProviderTests.m */; };
+		BE058606223D115B005A63C6 /* AsyncImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = BE058605223D115B005A63C6 /* AsyncImageLoading.m */; };
 		BE3C21AD221AD93600286E91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C21AC221AD93600286E91 /* AppDelegate.m */; };
 		BE3C21B3221AD93600286E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3C21B1221AD93600286E91 /* Main.storyboard */; };
 		BE3C21B5221AD93700286E91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3C21B4221AD93700286E91 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		BEB44BA4221D66B400D7786F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BA3221D66B400D7786F /* MainViewController.m */; };
 		BEB44BA8221D68D400D7786F /* ImagesTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BA7221D68D400D7786F /* ImagesTableDataSource.m */; };
 		BEB44BAC221D6EC700D7786F /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB44BAB221D6EC700D7786F /* Constants.m */; };
+		BEB59C22223D1A06001A3D8A /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB59C21223D1A06001A3D8A /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 		6B4910E9222C211200ACF281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4910EF222C214100ACF281 /* LocalCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalCacheTests.m; sourceTree = "<group>"; };
 		6B4910F1222C244C00ACF281 /* DataProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataProviderTests.m; sourceTree = "<group>"; };
+		BE058605223D115B005A63C6 /* AsyncImageLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncImageLoading.m; sourceTree = "<group>"; };
 		BE3C21A8221AD93600286E91 /* tableviewimageloading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableviewimageloading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3C21AB221AD93600286E91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE3C21AC221AD93600286E91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		BEB44BA7221D68D400D7786F /* ImagesTableDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesTableDataSource.m; sourceTree = "<group>"; };
 		BEB44BAA221D6DE500D7786F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BEB44BAB221D6EC700D7786F /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BEB59C21223D1A06001A3D8A /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				6B4910EF222C214100ACF281 /* LocalCacheTests.m */,
 				6B4910F1222C244C00ACF281 /* DataProviderTests.m */,
+				BE058605223D115B005A63C6 /* AsyncImageLoading.m */,
+				BEB59C21223D1A06001A3D8A /* test.png */,
 				6B4910E9222C211200ACF281 /* Info.plist */,
 			);
 			path = UnitTests;
@@ -352,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB59C22223D1A06001A3D8A /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4910F2222C244C00ACF281 /* DataProviderTests.m in Sources */,
+				BE058606223D115B005A63C6 /* AsyncImageLoading.m in Sources */,
 				6B4910F0222C214100ACF281 /* LocalCacheTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
